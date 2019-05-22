@@ -37,7 +37,7 @@ def read_file(paths) -> dict:
 
     re = {}
     for path in paths:
-        cfg = yaml.load(open(path))
+        cfg = yaml.safe_load(open(path))
         merge(re, cfg)
 
     return re
